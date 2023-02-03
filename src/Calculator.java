@@ -9,9 +9,9 @@ public class Calculator {
     BinaryOperator<Integer> multiply = (x, y) -> x * y;
     BinaryOperator<Integer> devide = (x, y) -> {
         if (y ==0) {
-            return Integer.valueOf("Возможно переменная y не верно определена проверьте ее");
+            return Integer.MIN_VALUE;
         }
-        return Integer.MIN_VALUE;
+        return x/y;
     };
 
     UnaryOperator<Integer> pow = x -> x * x;
